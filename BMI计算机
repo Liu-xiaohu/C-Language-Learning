@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    double height;
+    double weight;
+    double BMI;
+
+    printf("请输入身高(m):");
+    if(scanf("%lf",&height)!=1||height<=0)
+    {
+        printf("输入错误，请输入大于0的数字\n");
+        return 1;
+    }
+    printf("请输入体重(kg):");
+    if(scanf("%lf",&weight)!=1||weight<=0)
+    {
+        printf("输入错误，请输入大于0数字\n");
+        return 1;
+    }
+    BMI=weight/(height*height);
+    printf("BMI=%.2f\n",BMI);
+    if(BMI>=28)
+    {
+        printf("肥胖\n");
+        printf("合理膳食，坚持锻炼，作息规律，科学减重");
+    }
+    else if(BMI>=24)
+    {
+        printf("超重\n");
+        printf("控制饮食，减少高热量食物，增加运动，控制体重");
+    }
+    else if(BMI>=18.5)
+    {
+        printf("正常\n");
+        printf("均衡饮食，坚持运动，保持良好生活习惯");
+    }
+    else
+    {
+        printf("偏瘦\n");
+        printf("加强营养，规律三餐，适度锻炼，增强体质");
+    }
+
+
+
+    return 0;
+}
