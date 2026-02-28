@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int count=0;
+    int a;
+    double average=0;
+    int sum=0;
+    do                                            //循环的另一种写法，更简洁，更迅速
+    {                                             //scanf("%d",&a);
+        printf("请输入要加的数字(输入-1结束):");    //while(a!=-1)
+        scanf("%d",&a);                           //{
+        if(a!=-1)                                 //count++;
+        {                                         //sum +=a;
+            count++;                              //scanf("%d",&a);
+            sum +=a;                              //}
+        }
+        else
+        {
+            printf("结束\n");
+        }
+    }while(a!=-1);
+    printf("你输入了%d个数字\n",count);
+    average=sum/count;
+    printf("平均数为%f\n",average);
+    return 0;
+}
