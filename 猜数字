@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    srand(time(0));
+    int number=rand();
+    int count=0;
+    int a;
+    number %=100+1;
+    printf("我已经想好了数字\n");
+    do
+    {
+    printf("请输入数字（1到100之间的数)\n");
+    scanf("%d",&a);
+    count++;
+    if(a>number)
+    {
+        printf("数字大了\n");
+    }
+    else if(a<number)
+    {
+        printf("数字小了\n");
+    }
+
+    }while(number!=a);
+    printf("恭喜你猜对了，你用了%d次就猜对了\n",count);
+    return 0;
+}
